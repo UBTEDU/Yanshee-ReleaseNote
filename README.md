@@ -243,3 +243,30 @@ pi@raspberrypi:~ $ sudo raspi-config
 6. 配置完成
 
 ![image](Versions/v1.5.1/EnableVNC/step6.png)
+
+7. 配置vnc认证方式
+
+Yanshee使用realVNC来提供远程桌面共享服务。默认情况下需要再配置vnc服务才能远程连接。
+
+   1. 打开/root/.vnc/config.d/vncserver-x11
+   ```
+   sudo vi /root/.vnc/config.d/vncserver-x11
+   ```
+   2. 修改Authentication字段的值为VncAuth
+   ```
+   Authentication=SystemAuth
+   修改为
+   Authentication=VncAuth
+   ```
+   3. 重新配置vnc密码
+    使用下面命令重新设置密码。
+   ```
+   sudo vncpasswd -service
+   ```
+   4. 重启新动服务
+   ```
+   sudo systemctl stop vncserver-x11-serviced.service
+   sudo systemctl start vncserver-x11-serviced.service
+   ```
+
+更多关于vnc的内容，请看 [Authenticating to VNC Server](https://www.raspberrypi.org/documentation/remote-access/vnc/)
