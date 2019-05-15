@@ -190,7 +190,7 @@ Yanshee可以通过vnc连接共享桌面。但是由于安全原因，vnc默认�
 
         | 用户名 | 密码 |
         | --- | --- |
-        | raspberry | pi |
+        | pi | raspberry |
 
         ![putty_login](Versions/v1.5.1/putty/putty_login.png)
 
