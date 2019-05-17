@@ -105,7 +105,7 @@ Exmaples here:
 
 #### 下载最新的软件
 
-[uPi OS](https://github.com/UBTEDU/Yanshee-Release/blob/master/Noobs/)
+[机器人主体软件](https://github.com/UBTEDU/Yanshee-Release/blob/master/Noobs/)
 
 #### 如何插拔SD方法
 
